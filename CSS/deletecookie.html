@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script>
+        function deleteCookies() {
+            var cookie_value = username.value;
+            document.cookie = "username=" + cookie_value;
+            alert("cookie is deleted");
+
+        }
+    </script>
+</head>
+
+<body>
+    Enter username<input type="text" id="username"><br> password
+    <input type="text" id="password"><br><br>
+    <input type="button" value="deleteCookies" onclick="deleteCookies()">
+
+</body>
+
+</html>

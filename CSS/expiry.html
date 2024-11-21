@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Expire Date</title>
+    <script type="text/Javascript">
+        function writecookies() { var now=new Date(); now.setMonth(now.getMonth()+1); var cookie_value = username.value; document.cookie="username="+cookie_value+";expires="+now.toUTCString(); alert("expiry date of cookie changed"+"username="+cookie_value); }
+    </script>
+</head>
+
+<body>
+    Enter name: <input type="text" id="username">
+    <input type="button" value="extend the expiry date" onclick="writecookies()">
+</body>
+
+</html>

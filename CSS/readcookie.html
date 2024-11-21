@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Read Cookie Example</title>
+    <script>
+        function readCookies() {
+            var cookies = document.cookie;
+
+            var cookieArray = cookies.split("; ");
+            var usernameValue = "";
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookiePair = cookieArray[i].split("=");
+                if (cookiePair[0] === "username") {
+                    usernameValue = decodeURIComponent(cookiePair[1]);
+                    break;
+                }
+            }
+
+            if (usernameValue) {
+                alert("The username cookie value is: " + usernameValue);
+            } else {
+                alert("No username cookie found");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Read a Cookie</h2>
+    <label>Enter username: </label><input type="text" id="username"><br><br>
+    <label>Password: </label><input type="password" id="password"><br><br>
+    <input type="button" value="Read Cookie" onclick="readCookies()">
+</body>
+
+</html>
